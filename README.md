@@ -7,8 +7,8 @@ Image is built weekly, and it's expected that you start it with environment vari
 
 ## Tags
 
-* [`21-apache-ffmpeg`](https://github.com/aheimsbakk/container-nextcloud/blob/master/21/Dockerfile)
-* [`20-apache-ffmpeg`](https://github.com/aheimsbakk/container-nextcloud/blob/master/20/Dockerfile)
+* [`21-apache-ffmpeg`](https://github.com/aheimsbakk/container-nextcloud/blob/master/Dockerfile.21)
+* [`20-apache-ffmpeg`](https://github.com/aheimsbakk/container-nextcloud/blob/master/Dockerfile.20)
 
 # Usage
 
