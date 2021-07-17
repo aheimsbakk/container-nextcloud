@@ -1,0 +1,8 @@
+FROM nextcloud:22-apache
+
+RUN apt-get update; \
+    apt-get -y install \
+      ffmpeg \
+      libmagickcore-6.q16-6-extra \
+      ; \
+    apt-get clean
