@@ -1,0 +1,15 @@
+ARG BASE=nextcloud
+ARG RELEASE=31-apache
+
+FROM ${BASE}:${RELEASE}
+
+RUN apt-get update; \
+    apt-get -y install \
+      ffmpeg \
+      libbz2-dev \
+      libmagickcore-6.q16-6-extra \
+      smbclient \
+      ; \
+    apt-get clean
+
+RUN docker-php-ext-install bz2
