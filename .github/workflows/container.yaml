@@ -78,5 +78,5 @@ jobs:
         with:
           package-type: container
           package-name: nextcloud
-          min-versions-to-keep: 10
+          min-versions-to-keep: 6
           delete-only-untagged-versions: true
