@@ -21,15 +21,15 @@ jobs:
           - extra_args: --build-arg=RELEASE="31-apache"
             tags: latest 31-apache
             platform: linux/amd64,linux/arm64
-            containerfile: Dockerfile
+            containerfile: Containerfile
           - extra_args: --build-arg=RELEASE="30-apache"
             tags: 30-apache
             platform: linux/amd64,linux/arm64
-            containerfile: Dockerfile
+            containerfile: Containerfile
           - extra_args: --build-arg=RELEASE="29-apache"
             tags: 29-apache
             platform: linux/amd64,linux/arm64
-            containerfile: Dockerfile
+            containerfile: Containerfile
 
     env:
       STORAGE_DRIVER: vfs
