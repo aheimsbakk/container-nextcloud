@@ -52,7 +52,6 @@ jobs:
               RELEASE=31-apache
               BASE=nextcloud
             tags: |
-              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:latest
               ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:31-apache-ffmpeg
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
@@ -100,7 +99,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          push: ${{ github.ref == 'refs/heads/main' || github.event_name == 'schedule' }}
+          push: ${{ github.ref == 'refs/heads/master' || github.event_name == 'schedule' }}
           provenance: false
           platforms: ${{ matrix.container.platforms }}
           tags: ${{ matrix.container.tags }}
@@ -108,7 +107,7 @@ jobs:
           build-args: ${{ matrix.container.build-args }}
 
       - name: Clean up old versions
-        if: ${{ contains(github.api_url, 'github') && ( github.ref == 'refs/heads/main' || github.event_name == 'schedule' ) }} 
+        if: ${{ contains(github.api_url, 'github') && ( github.ref == 'refs/heads/master' || github.event_name == 'schedule' ) }} 
         uses: actions/delete-package-versions@v5
         with:
           package-type: container
