@@ -17,3 +17,5 @@ RUN eatmydata apt-get update; \
     apt-get clean
 
 RUN docker-php-ext-install bz2
+
+# Updated 2025-08-27
