@@ -11,7 +11,7 @@ RUN eatmydata apt-get update; \
     apt-get -y install \
       ffmpeg \
       libbz2-dev \
-      libmagickcore-6.q16-6-extra \
+      libmagickcore-7.q16-10-extra \
       smbclient \
       ; \
     apt-get clean
