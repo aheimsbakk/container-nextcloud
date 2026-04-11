@@ -50,25 +50,25 @@ jobs:
       matrix:
         container:
           - build-args: |
-              RELEASE=31-apache
+              RELEASE=33-apache
               BASE=nextcloud
             tags: |
-              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:31-apache-ffmpeg
+              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:33-apache-ffmpeg
               ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:latest
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
           - build-args: |
-              RELEASE=30-apache
+              RELEASE=32-apache
               BASE=nextcloud
             tags: |
-              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:30-apache-ffmpeg
+              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:32-apache-ffmpeg
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
           - build-args: |
-              RELEASE=29-apache
+              RELEASE=31-apache
               BASE=nextcloud
             tags: |
-              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:29-apache-ffmpeg
+              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:31-apache-ffmpeg
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
 

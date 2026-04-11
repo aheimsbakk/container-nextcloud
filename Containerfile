@@ -1,5 +1,5 @@
 ARG BASE=nextcloud
-ARG RELEASE=31-apache
+ARG RELEASE=33-apache
 
 FROM ${BASE}:${RELEASE}
 
