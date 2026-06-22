@@ -7,9 +7,9 @@ Image is built weekly, and it's expected that you start it with environment vari
 
 ## Tags
 
+* `34-apache-ffmpeg`
 * `33-apache-ffmpeg`
 * `32-apache-ffmpeg`
-* `31-apache-ffmpeg`
 
 # Usage
 
