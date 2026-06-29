@@ -54,7 +54,6 @@ jobs:
               BASE=nextcloud
             tags: |
               ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:33-apache-ffmpeg
-              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:latest
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
           - build-args: |
@@ -69,6 +68,7 @@ jobs:
               BASE=nextcloud
             tags: |
               ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:34-apache-ffmpeg
+              ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:latest
             platforms: linux/amd64,linux/arm64
             containerfile: Containerfile
 
