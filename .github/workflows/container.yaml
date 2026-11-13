@@ -58,7 +58,7 @@ jobs:
             containerfile: Containerfile
           - build-args: |
               RELEASE=33-apache
-            BASE=nextcloud
+              BASE=nextcloud
             tags: |
               ${{ needs.set-vars.outputs.registry-name }}/${{ github.repository_owner }}/${{ needs.set-vars.outputs.container-name }}:33-apache-ffmpeg
             platforms: linux/amd64,linux/arm64
